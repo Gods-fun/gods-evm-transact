@@ -59,8 +59,7 @@
         {
           "user": "{{user1}}",
           "content": {
-            "text": "Transfer 0.001 ETH to 0xc0163E58648b247c143023CFB26C2BAA42C9d9A9",
-            "action": "transfer"
+            "text": "Transfer 0.001 ETH to 0xc0163E58648b247c143023CFB26C2BAA42C9d9A9"
           }
         },
         {
