@@ -127,9 +127,9 @@ then run `ENABLE_ACTION_PROCESSING=true pnpm start --character="characters/eliza
 once you tag the bot or reply to one of it's tweets with a transfer request:
 
 ```
-transfer [amount] [eth] to [address] on [base]
+Please Transfer [amount] [eth] to [address] on [base]
 
-@bot transfer 0.0001 eth to 0xc0163E58648b247c143023CFB26C2BAA42C9d9A9 on base
+@agent Please Transfer 0.0001 eth to 0xc0163E58648b247c143023CFB26C2BAA42C9d9A9 on base
 ```
 
 
