@@ -122,47 +122,14 @@ NEAR_NETWORK=testnet # or mainnet
 
 bare minimum to .env set up put this .env in twitter-client & root
 
-then run pnpm start --character="characters/esther.character.json"
+then run `ENABLE_ACTION_PROCESSING=true pnpm start --character="characters/eliza.character.json`
 
-once you tag the bot or reply to one of it's tweets with a transfer request
+once you tag the bot or reply to one of it's tweets with a transfer request:
 
-### Add clients
+```
+transfer [amount] [eth] to [address] on [base]
 
-```diff
-- clients: [],
-+ clients: [Clients.TWITTER, Clients.DISCORD],
+@bot transfer 0.0001 eth to 0xc0163E58648b247c143023CFB26C2BAA42C9d9A9 on base
 ```
 
-## Duplicate the .env.example template
 
-```bash
-cp .env.example .env
-```
-
-\* Fill out the .env file with your own values.
-
-### Add login credentials and keys to .env
-
-```diff
--DISCORD_APPLICATION_ID=
--DISCORD_API_TOKEN= # Bot token
-+DISCORD_APPLICATION_ID="000000772361146438"
-+DISCORD_API_TOKEN="OTk1MTU1NzcyMzYxMT000000.000000.00000000000000000000000000000000"
-...
--OPENROUTER_API_KEY=
-+OPENROUTER_API_KEY="sk-xx-xx-xxx"
-...
--TWITTER_USERNAME= # Account username
--TWITTER_PASSWORD= # Account password
--TWITTER_EMAIL= # Account email
-+TWITTER_USERNAME="username"
-+TWITTER_PASSWORD="password"
-+TWITTER_EMAIL="your@email.com"
-```
-
-## Install dependencies and start your agent
-
-```bash
-pnpm i && pnpm start
-```
-Note: this requires node to be at least version 22 when you install packages and run the agent.
