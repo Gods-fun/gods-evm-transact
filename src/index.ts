@@ -72,6 +72,7 @@ export function createAgent(
     character,
     plugins: [
       evmPlugin,
+      
       bootstrapPlugin,
       nodePlugin,
       character.settings?.secrets?.WALLET_PUBLIC_KEY ? solanaPlugin : null,

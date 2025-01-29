@@ -14,6 +14,41 @@ export const wait = (minTime: number = 1000, maxTime: number = 3000) => {
     return new Promise((resolve) => setTimeout(resolve, waitTime));
 };
 
+export type MediaData = {
+    data: Buffer;
+    mediaType: string | undefined;
+};
+
+export async function fetchMediaData(
+    attachments: Media[]
+): Promise<MediaData[]> {
+    return Promise.all(
+        attachments.map(async (attachment: Media) => {
+            if (/^(http|https):\/\//.test(attachment.url)) {
+                // Handle HTTP URLs
+                const response = await fetch(attachment.url);
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch file: ${attachment.url}`);
+                }
+                const mediaBuffer = Buffer.from(await response.arrayBuffer());
+                const mediaType = attachment.contentType;
+                return { data: mediaBuffer, mediaType };
+            } else if (fs.existsSync(attachment.url)) {
+                // Handle local file paths
+                const mediaBuffer = await fs.promises.readFile(
+                    path.resolve(attachment.url)
+                );
+                const mediaType = attachment.contentType;
+                return { data: mediaBuffer, mediaType };
+            } else {
+                throw new Error(
+                    `File not found: ${attachment.url}. Make sure the path is correct.`
+                );
+            }
+        })
+    );
+}
+
 export const isValidTweet = (tweet: Tweet): boolean => {
     // Filter out tweets with too many hashtags, @s, or $ signs, probably spam or garbage
     const hashtagCount = (tweet.text?.match(/#/g) || []).length;

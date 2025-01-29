@@ -88,13 +88,36 @@ export class ClientBase extends EventEmitter {
     runtime: IAgentRuntime;
     twitterConfig: TwitterConfig;
     directions: string;
+    protected processedTweets: Set<string> = new Set<string>();
     lastCheckedTweetId: bigint | null = null;
     imageDescriptionService: IImageDescriptionService;
     temperature: number = 0.5;
 
     requestQueue: RequestQueue = new RequestQueue();
-
     profile: TwitterProfile | null;
+
+    /**
+     * Marks a tweet as processed and manages the processed set
+     * @param tweetId - ID of the tweet to mark as processed
+     */
+    markTweetProcessed(tweetId: string): void {
+        this.processedTweets.add(tweetId);
+        
+        // Optional: Implement size management to prevent memory issues
+        if (this.processedTweets.size > 10000) { // Arbitrary limit
+            const entriesToRemove = [...this.processedTweets].slice(0, 5000);
+            entriesToRemove.forEach(id => this.processedTweets.delete(id));
+        }
+    }
+
+    /**
+     * Checks if a tweet has been processed
+     * @param tweetId - ID of the tweet to check
+     * @returns boolean indicating if tweet has been processed
+     */
+    isTweetProcessed(tweetId: string): boolean {
+        return this.processedTweets.has(tweetId);
+    }
 
     async cacheTweet(tweet: Tweet): Promise<void> {
         if (!tweet) {
