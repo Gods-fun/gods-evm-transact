@@ -17,6 +17,7 @@ const twitterUsernameSchema = z
  * including new fields like TWITTER_SPACES_ENABLE.
  */
 export const twitterEnvSchema = z.object({
+    TWITTER_TIME_WINDOW: z.number().int().default(7200),
     TWITTER_DRY_RUN: z.boolean(),
     TWITTER_USERNAME: z.string().min(1, "X/Twitter username is required"),
     TWITTER_PASSWORD: z.string().min(1, "X/Twitter password is required"),
