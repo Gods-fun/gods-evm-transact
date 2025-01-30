@@ -6,12 +6,8 @@ import {
     type IAgentRuntime,
     ModelClass,
     stringToUuid,
-    type TemplateType,
     type UUID,
-    truncateToCompleteSentence,
     parseJSONObjectFromText,
-    extractAttributes,
-    cleanJsonResponse,
 } from "@elizaos/core";
 import { elizaLogger } from "@elizaos/core";
 import type { ClientBase } from "./base.ts";

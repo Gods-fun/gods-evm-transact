@@ -701,6 +701,7 @@ private cleanResponseText(text: string): string {
     // Define priority levels for different action types
     const priorities: Record<string, number> = {
       TRANSFER: 100, // Highest priority for transfers
+      GENERATE_IMAGE: 100,
       BRIDGE: 90, // High priority for bridge operations
       SWAP: 80, // High priority for swaps
       SEND_TOKEN: 100, // Equivalent to transfer

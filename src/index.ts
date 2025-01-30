@@ -22,7 +22,7 @@ import {
 } from "./config/index";
 import { initializeDatabase } from "./database/index";
 import evmPlugin from "@elizaos/plugin-evm";
-
+import { imageGenerationPlugin } from "@elizaos/plugin-image-generation";
 import * as dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -72,8 +72,8 @@ export function createAgent(
     character,
     plugins: [
       evmPlugin,
-      
       bootstrapPlugin,
+      imageGenerationPlugin,
       nodePlugin,
       character.settings?.secrets?.WALLET_PUBLIC_KEY ? solanaPlugin : null,
     ].filter(Boolean),

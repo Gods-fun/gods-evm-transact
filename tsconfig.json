@@ -5,6 +5,16 @@
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "allowJs": true,
-    "strict": true
-  }
+    "strict": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@elizaos/*": ["./types/*"]
+    }
+  },
+  "include": [
+    "./types/**/*",
+    "./src/**/*"
+  ]
 }

@@ -1,6 +1,5 @@
 import path from "path";
 import { defineConfig } from "vite";
-import topLevelAwait from "vite-plugin-top-level-await";
 import react from "@vitejs/plugin-react";
 import wasm from "vite-plugin-wasm";
 import { config } from "dotenv";
@@ -9,7 +8,7 @@ config({ path: path.resolve(__dirname, "../.env") });
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [wasm(), topLevelAwait(), react()],
+    plugins: [wasm(), react()],
     optimizeDeps: {
         exclude: ["onnxruntime-node", "@anush008/tokenizers"],
     },
