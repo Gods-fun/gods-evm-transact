@@ -311,7 +311,7 @@ export const initWalletProvider = async (runtime: IAgentRuntime) => {
             runtime.agentId
         );
         return new WalletProvider(
-            deriveKeyResult.keypair,
+            deriveKeyResult.keypair as unknown as `0x${string}`,
             runtime.cacheManager,
             chains
         );

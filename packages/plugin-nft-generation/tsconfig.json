@@ -3,10 +3,9 @@
     "compilerOptions": {
         "outDir": "dist",
         "rootDir": "src",
-        "types": ["node"]
+        "types": ["node"],
+        "declaration": true,
+        "declarationMap": true
     },
-    "include": [
-        "src/**/*.ts",
-        "src/solModule.d.ts"
-    ]
+    "include": ["src/**/*.ts"]
 }

@@ -35,7 +35,8 @@
 		"node-cache": "5.1.2",
 		"solc": "^0.8.28",
 		"tsup": "8.3.5",
-		"viem": "^2.21.60"
+		"viem": "^2.21.60",
+		"zod": "^3.23.8"
 	},
 	"scripts": {
 		"build": "tsup --format esm --dts",

@@ -1,0 +1,28 @@
+
+
+> @elizaos/plugin-image-generation@0.1.9 build /Users/sero/work/gods-starter/packages/plugin-image-generation
+> tsup --format esm --dts
+
+[34mCLI[39m Building entry: src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.3.5
+[34mCLI[39m Using tsup config: /Users/sero/work/gods-starter/packages/plugin-image-generation/tsup.config.ts
+[34mCLI[39m Target: esnext
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[32mESM[39m [1mdist/index.js     [22m[32m13.03 KB[39m
+[32mESM[39m [1mdist/index.js.map [22m[32m25.47 KB[39m
+[32mESM[39m ⚡️ Build success in 14ms
+DTS Build start
+error TS2688: Cannot find type definition file for 'node'.
+  The file is in the program because:
+    Entry point of type library 'node' specified in compilerOptions
+
+[31mError: error occurred in dts build
+    at Worker.<anonymous> (/Users/sero/work/gods-starter/node_modules/.pnpm/tsup@8.3.5_postcss@8.5.1_tsx@4.19.2_typescript@5.6.3_yaml@2.7.0/node_modules/tsup/dist/index.js:1541:26)
+    at Worker.emit (node:events:513:28)
+    at MessagePort.<anonymous> (node:internal/worker:267:53)
+    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:827:20)
+    at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28)[39m
+DTS Build error
+[41m[30m ELIFECYCLE [39m[49m [31mCommand failed with exit code 1.[39m

@@ -6,6 +6,11 @@ export default defineConfig({
     sourcemap: true,
     clean: true,
     format: ["esm"], // Ensure you're targeting CommonJS
+    dts: {
+        compilerOptions: {
+          types: ['node']
+        }
+      },
     external: [
         "dotenv", // Externalize dotenv to prevent bundling
         "fs", // Externalize fs to use Node.js built-in module
