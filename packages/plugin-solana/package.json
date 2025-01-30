@@ -5,6 +5,9 @@
 	"main": "dist/index.js",
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsup --format esm --dts"
+	},
 	"exports": {
 		"./package.json": "./package.json",
 		".": {
@@ -21,7 +24,14 @@
 	"dependencies": {
 		"@coral-xyz/anchor": "0.30.1",
 		"@elizaos/core": "workspace:*",
-		"uuid": "^11.0.3"
+		"uuid": "^11.0.3",
+		"@elizaos/plugin-trustdb": "0.1.7",
+		"@elizaos/plugin-tee": "0.1.7",
+		"@solana/spl-token": "^0.4.0",
+		"@solana/web3.js": "^1.90.0",
+		"bignumber.js": "^9.1.2",
+		"fomo-sdk-solana": "^1.0.0",
+		"node-cache": "^5.1.2"
 	},
 	"devDependencies": {
 		"@types/uuid": "^10.0.0",

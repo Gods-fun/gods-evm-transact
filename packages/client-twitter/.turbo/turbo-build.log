@@ -12,7 +12,7 @@
 [34mESM[39m Build start
 [32mESM[39m [1mdist/index.js     [22m[32m94.93 KB[39m
 [32mESM[39m [1mdist/index.js.map [22m[32m192.07 KB[39m
-[32mESM[39m ⚡️ Build success in 23ms
+[32mESM[39m ⚡️ Build success in 40ms
 DTS Build start
-DTS ⚡️ Build success in 2713ms
+DTS ⚡️ Build success in 4144ms
 DTS dist/index.d.ts 158.00 B

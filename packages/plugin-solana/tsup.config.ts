@@ -1,11 +1,12 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-    entry: ["src/index.ts"],
+    entry: ['src/index.ts'],
+    format: ['esm'],
+    dts: true,
+    clean: true,
     outDir: "dist",
     sourcemap: true,
-    clean: true,
-    format: ["esm"], // Ensure you're targeting CommonJS
     external: [
         "dotenv", // Externalize dotenv to prevent bundling
         "fs", // Externalize fs to use Node.js built-in module
@@ -13,6 +14,9 @@ export default defineConfig({
         "@reflink/reflink",
         "@node-llama-cpp",
         "https",
+        '@elizaos/core',
+        '@coral-xyz/anchor',
+        'uuid',
         "http",
         "agentkeepalive",
         "safe-buffer",

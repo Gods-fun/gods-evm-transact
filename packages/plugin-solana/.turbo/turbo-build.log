@@ -10,26 +10,9 @@
 [34mCLI[39m Target: esnext
 [34mCLI[39m Cleaning output folder
 [34mESM[39m Build start
-[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "uuid"[0m
-
-    src/providers/trustScoreProvider.ts:18:29:
-[37m      18 │ import { v4 as uuidv4 } from [32m"uuid"[37m;
-         ╵                              [32m~~~~~~[0m
-
-  You can mark the path "uuid" as external to exclude it from the bundle, which will remove this
-  error and leave the unresolved path in the bundle.
-
-[31mESM[39m [31mBuild failed[39m
-[31mError: Build failed with 1 error:
-src/providers/trustScoreProvider.ts:18:29: ERROR: Could not resolve "uuid"
-    at failureErrorWithLog (/Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:1476:15)
-    at /Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:945:25
-    at runOnEndCallbacks (/Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:1316:45)
-    at buildResponseToResult (/Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:943:7)
-    at /Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:970:16
-    at responseCallbacks.<computed> (/Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:622:9)
-    at handleIncomingPacket (/Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:677:12)
-    at Socket.readFromStdout (/Users/sero/work/gods-starter/node_modules/.pnpm/esbuild@0.24.2/node_modules/esbuild/lib/main.js:600:7)
-    at Socket.emit (node:events:513:28)
-    at addChunk (node:internal/streams/readable:559:12)[39m
+[32mESM[39m [1mdist/index.js     [22m[32m146.11 KB[39m
+[32mESM[39m [1mdist/index.js.map [22m[32m304.34 KB[39m
+[32mESM[39m ⚡️ Build success in 62ms
 DTS Build start
+DTS ⚡️ Build success in 3955ms
+DTS dist/index.d.ts 16.20 KB

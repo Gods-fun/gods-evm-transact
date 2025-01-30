@@ -8,6 +8,29 @@
         "outputs": [
           "dist/**"
         ]
+      },
+      "@elizaos/core#build": {
+        "outputs": ["dist/**"]
+      },
+      "@elizaos/plugin-solana#build": {
+        "outputs": ["dist/**"],
+        "dependsOn": ["@elizaos/core#build"]
+      },
+      "@elizaos/plugin-evm#build": {
+        "outputs": ["dist/**"],
+        "dependsOn": ["@elizaos/core#build"]
+      },
+      "@elizaos/plugin-image-generation#build": {
+        "outputs": ["dist/**"],
+        "dependsOn": ["@elizaos/core#build"]
+      },
+      "@elizaos/plugin-nft-generation#build": {
+        "outputs": ["dist/**"],
+        "dependsOn": ["@elizaos/core#build"]
+      },
+      "@elizaos/client-twitter#build": {
+        "outputs": ["dist/**"],
+        "dependsOn": ["@elizaos/core#build"]
       }
     }
 }
